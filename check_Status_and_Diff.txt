@@ -1,4 +1,4 @@
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git status
 On branch master
 Untracked files:
@@ -8,17 +8,17 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git diff check_Status_and_Diff.txt
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ vim check_Status_and_Diff.txt
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ cat check_Status_and_Diff.txt
 init status!
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git status
 On branch master
 Untracked files:
@@ -28,24 +28,24 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git add check_Status_and_Diff.txt
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git commit -"新建文件check_Status_and_Diff.txt并初始化内容"
 [master 921ff56] 新建文件check_Status_and_Diff.txt并初始化内容
  1 file changed, 1 insertion(+)
  create mode 100644 check_Status_and_Diff.txt
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ vi check_Status_and_Diff.txt
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ cat check_Status_and_Diff.txt
 init status!
 add one line!
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git diff check_Status_and_Diff.txt
 diff --git a/check_Status_and_Diff.txt b/check_Status_and_Diff.txt
 index 059ebac..acf333a 100644
@@ -55,14 +55,14 @@ index 059ebac..acf333a 100644
  init status!
 +add one line!
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git diff check_Status_and_Diff.txt
 diff --git a/check_Status_and_Diff.txt b/check_Status_and_Diff.txt
 index acf333a..e105cd4 100644
 --- a/check_Status_and_Diff.txt
 +++ b/check_Status_and_Diff.txt
 @@ -1,2 +1,56 @@
-+waisam@waisam-PC MINGW64 /f/learGit (master)
++waisam@waisam-PC MINGW64 /f/learnGit (master)
 +$ git status
 +On branch master
 +Untracked files:
@@ -72,17 +72,17 @@ index acf333a..e105cd4 100644
 +
 +nothing added to commit but untracked files present (use "git add" to track)
 +
-+waisam@waisam-PC MINGW64 /f/learGit (master)
++waisam@waisam-PC MINGW64 /f/learnGit (master)
 +$ git diff check_Status_and_Diff.txt
 +
-+waisam@waisam-PC MINGW64 /f/learGit (master)
++waisam@waisam-PC MINGW64 /f/learnGit (master)
 +$ vim check_Status_and_Diff.txt
 +
-+waisam@waisam-PC MINGW64 /f/learGit (master)
++waisam@waisam-PC MINGW64 /f/learnGit (master)
 +$ cat check_Status_and_Diff.txt
 +init status!
 +
-+waisam@waisam-PC MINGW64 /f/learGit (master)
++waisam@waisam-PC MINGW64 /f/learnGit (master)
 +$ git status
 +On branch master
 +Untracked files:
@@ -92,24 +92,24 @@ index acf333a..e105cd4 100644
 +
 +nothing added to commit but untracked files present (use "git add" to track)
 +
-+waisam@waisam-PC MINGW64 /f/learGit (master)
++waisam@waisam-PC MINGW64 /f/learnGit (master)
 +$ git add check_Status_and_Diff.txt
 +
-+waisam@waisam-PC MINGW64 /f/learGit (master)
++waisam@waisam-PC MINGW64 /f/learnGit (master)
 +$ git commit -"新建文件check_Status_and_Diff.txt并初始化内容"
 +[master 921ff56] 新建文件check_Status_and_Diff.txt并初始化内容
 + 1 file changed, 1 insertion(+)
 + create mode 100644 check_Status_and_Diff.txt
 +
-+waisam@waisam-PC MINGW64 /f/learGit (master)
++waisam@waisam-PC MINGW64 /f/learnGit (master)
 +$ vi check_Status_and_Diff.txt
 +
-+waisam@waisam-PC MINGW64 /f/learGit (master)
++waisam@waisam-PC MINGW64 /f/learnGit (master)
 +$ cat check_Status_and_Diff.txt
  init status!
  add one line!
 +
-+waisam@waisam-PC MINGW64 /f/learGit (master)
++waisam@waisam-PC MINGW64 /f/learnGit (master)
 +$ git diff check_Status_and_Diff.txt
 +diff --git a/check_Status_and_Diff.txt b/check_Status_and_Diff.txt
 +index 059ebac..acf333a 100644
