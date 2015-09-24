@@ -1,18 +1,18 @@
 waisam@waisam-PC MINGW64 /c/Windows/system32
-$ cd /f/learGit/
+$ cd /f/learnGit/
 
-waisam@waisam-PC MINGW64 /f/learGit
+waisam@waisam-PC MINGW64 /f/learnGit
 $ git init #创建本地仓库
-Initialized empty Git repository in F:/learGit/.git/
+Initialized empty Git repository in F:/learnGit/.git/
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ ls -al
 total 12
 drwxr-xr-x 1 waisam 197121 0 九月 24 02:56 ./
 drwxr-xr-x 1 waisam 197121 0 九月 24 02:50 ../
 drwxr-xr-x 1 waisam 197121 0 九月 24 02:56 .git/
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git status #查看本地仓库状态
 On branch master
 
@@ -20,10 +20,10 @@ Initial commit
 
 nothing to commit (create/copy files and use "git add" to track)
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ vim create_repository.txt
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ ls -al
 total 12
 drwxr-xr-x 1 waisam 197121 0 九月 24 02:58 ./
@@ -31,23 +31,23 @@ drwxr-xr-x 1 waisam 197121 0 九月 24 02:50 ../
 drwxr-xr-x 1 waisam 197121 0 九月 24 02:57 .git/
 -rw-r--r-- 1 waisam 197121 0 九月 24 02:58 create_repository.txt
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ rm create_repository.txt
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ ls -al
 total 12
 drwxr-xr-x 1 waisam 197121 0 九月 24 02:58 ./
 drwxr-xr-x 1 waisam 197121 0 九月 24 02:50 ../
 drwxr-xr-x 1 waisam 197121 0 九月 24 02:57 .git/
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ touch create_repository.txt
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ cat create_repository.txt
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git status
 On branch master
 
@@ -60,10 +60,10 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git add create_repository.txt
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git status
 On branch master
 
@@ -75,18 +75,18 @@ Changes to be committed:
         new file:   create_repository.txt
 
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git commit -m "创建本地仓库,添加操作记录文件create_repository"
 [master (root-commit) 7a31c5e] 创建仓库,添加操作记录文件create_repository
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 create_repository.txt
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git status
 On branch master
 nothing to commit, working directory clean
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git status
 On branch master
 Changes not staged for commit:
@@ -97,10 +97,10 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git add create_repository.txt
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git add commit -m "排版"
 error: unknown switch `m'
 usage: git add [<options>] [--] <pathspec>...
@@ -121,15 +121,15 @@ usage: git add [<options>] [--] <pathspec>...
     --ignore-missing      check if - even missing - files are ignored in dry run
 
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git commit -m "排版"
 [master 4fb4255] 排版
  1 file changed, 87 insertions(+)
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git remote add origin git@github.com:waisam/learnGit.git
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git push -u origin master
 To git@github.com:waisam/learnGit.git
  ! [rejected]        master -> master (fetch first)
@@ -140,7 +140,7 @@ hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git config --list
 core.symlinks=false
 core.autocrlf=input
@@ -166,7 +166,7 @@ core.hidedotfiles=dotGitOnly
 remote.origin.url=git@github.com:waisam/learnGit.git
 remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git push origin master
 To git@github.com:waisam/learnGit.git
  ! [rejected]        master -> master (fetch first)
@@ -177,7 +177,7 @@ hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git pull
 warning: no common commits
 remote: Counting objects: 3, done.
@@ -196,12 +196,12 @@ If you wish to set tracking information for this branch you can do so with:
     git branch --set-upstream-to=origin/<branch> master
 
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git status
 On branch master
 nothing to commit, working directory clean
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git pull origin master
 From github.com:waisam/learnGit
  * branch            master     -> FETCH_HEAD
@@ -210,12 +210,12 @@ Merge made by the 'recursive' strategy.
  1 file changed, 2 insertions(+)
  create mode 100644 README.md
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git status
 On branch master
 nothing to commit, working directory clean
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git push origin master
 Counting objects: 8, done.
 Delta compression using up to 4 threads.
