@@ -2,7 +2,7 @@ waisam@waisam-PC MINGW64 /c/Windows/system32
 $ cd /f/learGit/
 
 waisam@waisam-PC MINGW64 /f/learGit
-$ git init
+$ git init #创建本地仓库
 Initialized empty Git repository in F:/learGit/.git/
 
 waisam@waisam-PC MINGW64 /f/learGit (master)
@@ -13,7 +13,7 @@ drwxr-xr-x 1 waisam 197121 0 九月 24 02:50 ../
 drwxr-xr-x 1 waisam 197121 0 九月 24 02:56 .git/
 
 waisam@waisam-PC MINGW64 /f/learGit (master)
-$ git status
+$ git status #查看本地仓库状态
 On branch master
 
 Initial commit
@@ -76,7 +76,7 @@ Changes to be committed:
 
 
 waisam@waisam-PC MINGW64 /f/learGit (master)
-$ git commit -m "创建仓库,添加操作记录文件create_repository"
+$ git commit -m "创建本地仓库,添加操作记录文件create_repository"
 [master (root-commit) 7a31c5e] 创建仓库,添加操作记录文件create_repository
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 create_repository.txt
@@ -85,6 +85,7 @@ waisam@waisam-PC MINGW64 /f/learGit (master)
 $ git status
 On branch master
 nothing to commit, working directory clean
+
 waisam@waisam-PC MINGW64 /f/learGit (master)
 $ git status
 On branch master
