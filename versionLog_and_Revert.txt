@@ -1,4 +1,4 @@
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git log #"查看当前版本之前的所有版本(倒序)"
 commit e1b5905cf5f8a19f2f6ae218a2dc69732e446073
 Author: waisam <waisam@live.com>
@@ -35,7 +35,7 @@ commit 7a31c5efbd6de8c6f3740d8602188930f18e3192
 Author: waisam <waisam@live.com>
 Date:   Thu Sep 24 11:00:43 2015 +0800
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git log --pretty=oneline #"查看当前版本之前的版本(倒序、一行)"
 e1b5905cf5f8a19f2f6ae218a2dc69732e446073 查看仓库状态和修改内容
 921ff56b8e64d314ed332d41451c4176852149e9 新建文件check_Status_and_Diff.txt并初始化内容
@@ -45,11 +45,11 @@ f3c93865809abbb3c8510a9078239cace03c7f8e 创建仓库,新建文件并提交到远程库
 7a31c5efbd6de8c6f3740d8602188930f18e3192 创建仓库,添加操作记录文件create_repository
 cac488cb85e8e60e11ba4c838c697fcc8b65c72f Initial commit
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git reset --hard HEAD^ #"HEAD回退到上一版本"
 HEAD is now at 921ff56 新建文件check_Status_and_Diff.txt并初始化内容
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git log --pretty=oneline
 921ff56b8e64d314ed332d41451c4176852149e9 新建文件check_Status_and_Diff.txt并初始化内容
 f3c93865809abbb3c8510a9078239cace03c7f8e 创建仓库,新建文件并提交到远程库
@@ -58,11 +58,11 @@ f3c93865809abbb3c8510a9078239cace03c7f8e 创建仓库,新建文件并提交到远程库
 7a31c5efbd6de8c6f3740d8602188930f18e3192 创建仓库,添加操作记录文件create_repository
 cac488cb85e8e60e11ba4c838c697fcc8b65c72f Initial commit
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git reset --hard HEAD^^ #"HEAD回退两个版本,即回退后最新为'Merge branch...‘"
 HEAD is now at 9d4517e Merge branch 'master' of github.com:waisam/learnGit
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git reflog #查看所有HEAD操作记录
 9d4517e HEAD@{0}: reset: moving to HEAD^^
 921ff56 HEAD@{1}: reset: moving to HEAD^
@@ -77,11 +77,11 @@ f3c9386 HEAD@{8}: commit: 创建仓库,新建文件并提交到远程库
 4fb4255 HEAD@{10}: commit: 排版
 7a31c5e HEAD@{11}: commit (initial): 创建仓库,添加操作记录文件create_repository
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git reset --hard HEAD@{6} #HEAD回退到指定版本(HEAD@{6})
 HEAD is now at e1b5905 查看仓库状态和修改内容
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git log --pretty=oneline
 e1b5905cf5f8a19f2f6ae218a2dc69732e446073 查看仓库状态和修改内容
 921ff56b8e64d314ed332d41451c4176852149e9 新建文件check_Status_and_Diff.txt并初始化内容
@@ -91,6 +91,6 @@ f3c93865809abbb3c8510a9078239cace03c7f8e 创建仓库,新建文件并提交到远程库
 7a31c5efbd6de8c6f3740d8602188930f18e3192 创建仓库,添加操作记录文件create_repository
 cac488cb85e8e60e11ba4c838c697fcc8b65c72f Initial commit
 
-waisam@waisam-PC MINGW64 /f/learGit (master)
+waisam@waisam-PC MINGW64 /f/learnGit (master)
 $ git reset --hard HEAD~3 #HEAD回退3个版本
 HEAD is now at 9d4517e Merge branch 'master' of github.com:waisam/learnGit
