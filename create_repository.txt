@@ -85,3 +85,141 @@ waisam@waisam-PC MINGW64 /f/learGit (master)
 $ git status
 On branch master
 nothing to commit, working directory clean
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   create_repository.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git add create_repository.txt
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git add commit -m "排版"
+error: unknown switch `m'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git commit -m "排版"
+[master 4fb4255] 排版
+ 1 file changed, 87 insertions(+)
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git remote add origin git@github.com:waisam/learnGit.git
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git push -u origin master
+To git@github.com:waisam/learnGit.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:waisam/learnGit.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git config --list
+core.symlinks=false
+core.autocrlf=input
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+pack.packsizelimit=2g
+help.format=html
+http.sslcainfo=D:/Git/mingw64/ssl/certs/ca-bundle.crt
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+user.email=waisam@live.com
+user.name=waisam
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+core.hidedotfiles=dotGitOnly
+remote.origin.url=git@github.com:waisam/learnGit.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git push origin master
+To git@github.com:waisam/learnGit.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:waisam/learnGit.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git pull
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:waisam/learnGit
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git pull origin master
+From github.com:waisam/learnGit
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git push origin master
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (8/8), 1.35 KiB | 0 bytes/s, done.
+Total 8 (delta 0), reused 0 (delta 0)
+To git@github.com:waisam/learnGit.git
+   cac488c..9d4517e  master -> master
