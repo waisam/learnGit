@@ -1,1 +1,219 @@
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ vim modify_and_remove.txt #创建文件并初始化内容
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ cat modify_and_remove.txt
 modify and remove.
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   modify_and_remove.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   modify_and_remove.txt
+
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git add modify_and_remove.txt
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   modify_and_remove.txt
+
+
+waisam@waisam-PC MINGW64 /f/learGit (master)
+$ git commit -m "提交一个版本以便后续操作"
+[master cf88394] 提交一个版本以便后续操作
+ 1 file changed, 1 insertion(+)
+ create mode 100644 modify_and_remove.txt
+ 
+ waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ ls -al
+total 34
+drwxr-xr-x 1 waisam 197121    0 九月 24 08:49 ./
+drwxr-xr-x 1 waisam 197121    0 九月 24 08:54 ../
+drwxr-xr-x 1 waisam 197121    0 九月 24 08:59 .git/
+-rw-r--r-- 1 waisam 197121 3563 九月 24 08:55 check_Status_and_Diff.txt
+-rw-r--r-- 1 waisam 197121 7300 九月 24 08:55 create_repository.txt
+-rw-r--r-- 1 waisam 197121   19 九月 24 08:49 modify_and_remove.txt
+-rw-r--r-- 1 waisam 197121   31 九月 24 07:51 README.md
+-rw-r--r-- 1 waisam 197121 4112 九月 24 08:55 versionLog_and_Revert.txt
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ cat modify_and_remove.txt
+modify and remove.
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ vim modify_and_remove.txt #增加一行
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ cat modify_and_remove.txt
+modify and remove.
+I use vim to add one line.
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   modify_and_remove.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git checkout -- modify_and_remove.txt #撤销工作区的修改.
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ cat modify_and_remove.txt
+modify and remove.
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ cat modify_and_remove.txt
+modify and remove.
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git status #查看本地仓库状态(修改已被清除)
+On branch master
+nothing to commit, working directory clean
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ vim modify_and_remove.txt #再次增加一行
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ cat modify_and_remove.txt
+modify and remove.
+I use vim to add one line again.
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   modify_and_remove.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git diff HEAD -- modify_and_remove.txt #查看工作区和版本库里面最新版本
+diff --git a/modify_and_remove.txt b/modify_and_remove.txt
+index 3e6e0dd..f997b5a 100644
+--- a/modify_and_remove.txt
++++ b/modify_and_remove.txt
+@@ -1 +1,2 @@
+ modify and remove.
++I use vim to add one line again.
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git add modify_and_remove.txt #把修改放入暂存区
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   modify_and_remove.txt
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git reset HEAD modify_and_remove.txt #撤销暂存区的修改
+Unstaged changes after reset:
+M       modify_and_remove.txt
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   modify_and_remove.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ vim willBeRm #新增一个文件,供删除使用
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   willBeRm
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   modify_and_remove.txt
+
+		waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git commit -m "新增一个文件,供删除命令使用"
+[master f392163] 新增一个文件,供删除命令使用
+ 1 file changed, 1 insertion(+)
+ create mode 100644 willBeRm
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ rm willBeRm #删除本地(工作区)文件
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   modify_and_remove.txt
+        deleted:    willBeRm
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git rm willBeRm #删除版本库文件
+rm 'willBeRm'
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    willBeRm
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   modify_and_remove.txt
+
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git commit -m "提交确认删除"
+[master 0d75091] 提交确认删除
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 willBeRm
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   modify_and_remove.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
