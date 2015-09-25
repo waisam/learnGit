@@ -1,0 +1,107 @@
+waisam@waisam-PC MINGW64 /f/learnGit
+$ ssh-keygen -t rsa -C "waisam@live.com" #在本地创建ssh key
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/waisam/.ssh/id_rsa):
+Created directory '/c/Users/waisam/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/waisam/.ssh/id_rsa.
+Your public key has been saved in /c/Users/waisam/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:fIXqBa/kQCKKK6feusqpVodrXFMbcXwXMzudVEcsC8Y waisam@live.com
+The key's randomart image is:
++---[RSA 2048]----+
+|        .  . +.+=|
+|       . o oE.B +|
+|  . . . + o.o+ = |
+|.. . o + + .  o  |
+|o   . o S +      |
+| . o + * +       |
+|o + + . +        |
+|o+o+             |
+|O*+.             |
++----[SHA256]-----+
+
+
+waisam@waisam-PC MINGW64 /f/learnGit
+$ git init
+Initialized empty Git repository in F:/learnGit/.git/
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git remote #查看关联的远程库
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git remote add origin git@github.com:waisam/push-test.git #关联远程库,并未其设置别名origin
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git remote #查看关联的远程库
+origin
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        README.md
+        check_Status_and_Diff.txt
+        create_repository.txt
+        modify_and_remove.txt
+        remote_reposity/
+        versionLog_and_Revert.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git add *
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   README.md
+        new file:   check_Status_and_Diff.txt
+        new file:   create_repository.txt
+        new file:   modify_and_remove.txt
+        new file:   remote_reposity/create_ssh_key.txt
+        new file:   remote_reposity/flow_chart/SSH keys.png
+        new file:   remote_reposity/flow_chart/add SHH key.png
+        new file:   remote_reposity/flow_chart/setting.png
+        new file:   versionLog_and_Revert.txt
+
+waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git commit -m "learnGit notes" #提交到本地版本库
+[master (root-commit) 0d0cd07] learnGit notes
+ 9 files changed, 686 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 check_Status_and_Diff.txt
+ create mode 100644 create_repository.txt
+ create mode 100644 modify_and_remove.txt
+ create mode 100644 remote_reposity/create_ssh_key.txt
+ create mode 100644 remote_reposity/flow_chart/SSH keys.png
+ create mode 100644 remote_reposity/flow_chart/add SHH key.png
+ create mode 100644 remote_reposity/flow_chart/setting.png
+ create mode 100644 versionLog_and_Revert.txt
+
+ waisam@waisam-PC MINGW64 /f/learnGit (master)
+$ git push -u origin master #第一次推送到远程库
+The authenticity of host 'github.com (192.30.252.130)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.252.130' (RSA) to the list of known hosts.
+Counting objects: 13, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (13/13), 257.66 KiB | 0 bytes/s, done.
+Total 13 (delta 2), reused 0 (delta 0)
+To git@github.com:waisam/push-test.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
