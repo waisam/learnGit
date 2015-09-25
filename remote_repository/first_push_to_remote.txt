@@ -92,7 +92,7 @@ $ git commit -m "learnGit notes" #提交到本地版本库
  create mode 100644 versionLog_and_Revert.txt
 
  waisam@waisam-PC MINGW64 /f/learnGit (master)
-$ git push -u origin master #第一次推送到远程库
+$ git push -u origin master #第一次推送到远程库master分支
 The authenticity of host 'github.com (192.30.252.130)' can't be established.
 RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
 Are you sure you want to continue connecting (yes/no)? yes
