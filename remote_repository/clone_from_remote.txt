@@ -2,7 +2,7 @@
 $ cd /f
 
 waisam@waisam-PC MINGW64 /f
-$ ls -al
+$ ls -al #查看本目录下的所有文件
 total 16
 drwxr-xr-x 1 waisam 197121    0 九月 22 03:11 $RECYCLE.BIN/
 drwxr-xr-x 1 waisam 197121    0 九月 25 06:48 ./
